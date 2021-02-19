@@ -27,10 +27,12 @@
             
             $sql = " SELECT * FROM Users WHERE username=$userhi AND passwords=$pwhi";
             
+            
+            echo "1";
             $result= $pdo->query($sql);
-            echo "hi";
+            echo "2";
             $row= result->fetch;
-            echo "hi";
+            echo "3";
             if (!$row) {
                 echo "No such user";
                 exit();
