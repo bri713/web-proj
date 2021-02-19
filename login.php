@@ -24,7 +24,8 @@
                 $db["pass"],
                 ltrim($db["path"], "/")
             ));
-            
+            echo $userhi;
+            echo $pwhi;
             $sql = " SELECT * FROM Users WHERE username={$userhi} AND passwords={$pwhi}";
             
             
