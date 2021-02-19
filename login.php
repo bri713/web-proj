@@ -32,14 +32,11 @@
             echo "1";
             $result= $pdo->query($sql);
             echo "2";
-            $row= result->fetch();
-            echo "3";
-            if (!$row) {
-                echo "No such user";
-                exit();
+            
+            if ($result->columnCount() === 0) {
+                echo "none";
             }else{
-                echo "hi";
-                exit();
+                echo "hv";
             }
             echo "end";
         }
