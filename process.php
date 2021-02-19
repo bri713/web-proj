@@ -16,7 +16,7 @@
         ));
         echo $userhi;
         echo $pwhi;
-        $sql = " SELECT * FROM Users WHERE username=='$userhi' AND passwords=='$pwhi'";
+        $sql = " SELECT * FROM Users WHERE username = '$userhi' AND passwords = '$pwhi'";
         
         $result= $pdo->query($sql);
         
@@ -24,7 +24,8 @@
             echo "none";
         }else{
             echo "hv";
-            header(Location: index.php);
+            $redirect= 'https://young-wildwood-42922.herokuapp.com/index.php';
+            header(Location: $redirect);
         }
         echo "end";
     }
