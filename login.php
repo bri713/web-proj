@@ -28,6 +28,7 @@
             $sql = " SELECT * FROM Users WHERE username=$userhi AND passwords=$pwhi";
             
             $result= $pdo->query($sql);
+            echo "hi";
             $row= result->fetch;
             echo "hi";
             if (!$row) {
