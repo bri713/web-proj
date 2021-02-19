@@ -20,10 +20,11 @@
         
         $result= $pdo->query($sql);
         
-        if ($result->columnCount() === 0) {
+        if ($result->columnCount() == 0) {
             echo "none";
         }else{
             echo "hv";
+            header(Location: index.php);
         }
         echo "end";
     }
