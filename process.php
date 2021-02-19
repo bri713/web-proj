@@ -13,7 +13,7 @@
     echo "Hello DB user";
     echo db["user"];
     
-    $sql = "INSERT INTO Users (username, passwords) VALUES (HI, HI)";
+    $sql = " SELECT * FROM Users WHERE ";
     
     if($pdo->query($sql)==TRUE)
     {
