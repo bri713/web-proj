@@ -25,7 +25,7 @@
         }else{
             echo "hv";
             $redirect= 'https://young-wildwood-42922.herokuapp.com/index.php';
-            header(Location: $redirect);
+            header('Location: ' .$redirect);
         }
         echo "end";
     }
