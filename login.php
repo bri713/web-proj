@@ -11,9 +11,9 @@
     <?php
         if(isset($_POST['user'], $_POST['pass'])){
             
-            $user=$_POST['user'];
-            $pw=$_POST['pass'];
-            echo $user;
+            $userhi=$_POST['user'];
+            $pwhi=$_POST['pass'];
+            echo $userhi;
             
             $db = parse_url(getenv("DATABASE_URL"));
 
