@@ -25,7 +25,7 @@
                 ltrim($db["path"], "/")
             ));
             
-            $sql = " SELECT * FROM Users WHERE username=$userhi AND passwords=$pwhi";
+            $sql = " SELECT * FROM Users WHERE username={$userhi} AND passwords={$pwhi}";
             
             
             echo "1";
@@ -61,3 +61,5 @@
     </div>
 </body>
 </html>
+
+
