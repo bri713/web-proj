@@ -29,6 +29,7 @@
             
             $result= $pdo->query($sql);
             $row= result->fetch;
+            echo "hi";
             if (!$row) {
                 echo "No such user";
                 exit();
