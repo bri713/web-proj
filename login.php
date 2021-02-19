@@ -24,10 +24,8 @@
                 $db["pass"],
                 ltrim($db["path"], "/")
             ));
-            echo "Hello DB user";
-            echo db["user"];
             
-            $sql = " SELECT * FROM Users WHERE username=$userhi AND passwords=$passhi";
+            $sql = " SELECT * FROM Users WHERE username=$userhi AND passwords=$pwhi";
             
             $result= $pdo->query($sql);
             $row= result->fetch;
