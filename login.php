@@ -26,7 +26,7 @@
             ));
             echo $userhi;
             echo $pwhi;
-            $sql = " SELECT * FROM Users WHERE username LIKE {$userhi} AND passwords LIKE {$pwhi}";
+            $sql = " SELECT * FROM Users WHERE username='Brian' AND passwords='Brian'";
             
             
             echo "1";
