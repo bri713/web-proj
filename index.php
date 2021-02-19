@@ -7,7 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="myfile">Select a file:</label>
-    <input type="file" id="myfile" name="myfile">
+    <form action="/action_page.php">
+      <input type="file" id="myFile" name="filename">
+      <input type="submit">
+    </form>
 </body>
 </html>
