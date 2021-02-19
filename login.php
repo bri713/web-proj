@@ -13,7 +13,6 @@
             
             $userhi=$_POST['user'];
             $pwhi=$_POST['pass'];
-            echo $userhi;
             
             $db = parse_url(getenv("DATABASE_URL"));
 
@@ -28,13 +27,14 @@
             echo "Hello DB user";
             echo db["user"];
             
-            $sql = " SELECT * FROM Users WHERE ";
+            $sql = " SELECT * FROM Users WHERE username=$userhi AND passwords=$passhi";
             
-            if($pdo->query($sql)==TRUE)
-            {
-                echo "ADDED";
+            $result= $pdo->query($sql);
+            $row= result->fetch;
+            if ( ! $row) {
+                echo "No such user";
             }else{
-                echo "UNSUCCESS";
+                echo "hi";
             }
         }
     ?>
