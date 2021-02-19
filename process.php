@@ -1,25 +1,31 @@
-
 <?php
-    $db = parse_url(getenv("DATABASE_URL"));
+    if(isset($_POST['user'], $_POST['pass'])){
+        
+        $userhi=$_POST['user'];
+        $pwhi=$_POST['pass'];
+        
+        $db = parse_url(getenv("DATABASE_URL"));
 
-    $pdo = new PDO("pgsql:" . sprintf(
-        "host=%s;port=%s;user=%s;password=%s;dbname=%s",
-        $db["host"],
-        $db["port"],
-        $db["user"],
-        $db["pass"],
-        ltrim($db["path"], "/")
-    ));
-    echo "Hello DB user";
-    echo db["user"];
-    
-    $sql = " SELECT * FROM Users WHERE ";
-    
-    if($pdo->query($sql)==TRUE)
-    {
-        echo "ADDED";
-    }else{
-        echo "UNSUCCESS";
+        $pdo = new PDO("pgsql:" . sprintf(
+            "host=%s;port=%s;user=%s;password=%s;dbname=%s",
+            $db["host"],
+            $db["port"],
+            $db["user"],
+            $db["pass"],
+            ltrim($db["path"], "/")
+        ));
+        echo $userhi;
+        echo $pwhi;
+        $sql = " SELECT * FROM Users WHERE username='$userhi' AND passwords='$pwhi'";
+        
+        $result= $pdo->query($sql);
+        
+        if ($result->columnCount() === 0) {
+            echo "none";
+        }else{
+            echo "hv";
+        }
+        echo "end";
     }
 ?>
 
