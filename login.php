@@ -32,7 +32,7 @@
             echo "1";
             $result= $pdo->query($sql);
             echo "2";
-            $row= result->fetch;
+            $row= result->fetch();
             echo "3";
             if (!$row) {
                 echo "No such user";
