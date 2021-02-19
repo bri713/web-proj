@@ -25,7 +25,7 @@
                 ltrim($db["path"], "/")
             ));
             
-            $sql = ' SELECT * FROM Users WHERE username=$userhi AND passwords=$pwhi';
+            $sql = ' SELECT * FROM Users WHERE username='Brian' AND passwords='Brian';
             
             
             echo "1";
