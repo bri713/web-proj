@@ -1,26 +1,53 @@
 <?php
-if(isset($_POST['submit']))
-{
-$code1=$_POST['code1'];
-$code=$_POST['code']; 
-if($code1!="$code")
-{
-$msg="Invalide code"; 
-}
-else
-{
-$msg="Your code is correct";
-}
-}
-?>
-<form name="form" method="post">
-<p>Type Below this code <?php $Random_code=rand(); echo$Random_code; ?> </p><br />
-<p>Enter the random code<br />
-<input type="text" name="code1" title="random code" />
-<input type="hidden" name="code" value="<?php echo $Random_code; ?>" />
-</p>
-<p><input type="submit" value="check" title="code check" name="submit"/></p>
-</form>
-<p><?php if(isset($_POST['submit']))
-{ echo $msg; } ?>
-</p>
+  
+session_start(); 
+$msg = ''; 
+  
+// If user has given a captcha! 
+if (isset($_POST['input']) && sizeof($_POST['input']) > 0) 
+  
+    // If the captcha is valid 
+    if ($_POST['input'] == $_SESSION['captcha']) 
+        $msg = '<span style="color:green">SUCCESSFUL!!!</span>'; 
+    else 
+        $msg = '<span style="color:red">CAPTCHA FAILED!!!</span>'; 
+?> 
+   
+<style> 
+    body{ 
+        display:flex; 
+        flex-direction:column; 
+        align-items: center; 
+        justify-content: center; 
+    } 
+</style> 
+   
+<body> 
+    <h2>PROVE THAT YOU ARE NOT A ROBOT!!</h2> 
+      
+    <strong> 
+        Type the text in the image to prove 
+        you are not a robot 
+    </strong> 
+   
+    <div style='margin:15px'> 
+        <img src="captcha.php"> 
+    </div> 
+      
+    <form method="POST" action= 
+            " <?php echo $_SERVER['PHP_SELF']; ?>"> 
+        <input type="submit" value="Submit" name="submit"/> 
+    </form> 
+      
+    <div style='margin-bottom:5px'> 
+        <?php echo $msg; ?> 
+    </div> 
+      
+    <div> 
+        Can't read the image? Click 
+        <a href='<?php echo $_SERVER['PHP_SELF']; ?>'> 
+            here 
+        </a> 
+        to refresh! 
+    </div> 
+</body> 
