@@ -23,12 +23,6 @@ if (isset($_POST['input']) && sizeof($_POST['input']) > 0)
 </style> 
    
 <body> 
-    <h2>PROVE THAT YOU ARE NOT A ROBOT!!</h2> 
-      
-    <strong> 
-        Type the text in the image to prove 
-        you are not a robot 
-    </strong> 
    
     <div style='margin:15px'> 
         <img src="captcha.php"> 
@@ -45,11 +39,4 @@ if (isset($_POST['input']) && sizeof($_POST['input']) > 0)
         <?php echo $msg; ?> 
     </div> 
       
-    <div> 
-        Can't read the image? Click 
-        <a href='<?php echo $_SERVER['PHP_SELF']; ?>'> 
-            here 
-        </a> 
-        to refresh! 
-    </div> 
 </body> 
