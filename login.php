@@ -22,9 +22,6 @@ if (isset($_POST['input']) && sizeof($_POST['input']) > 0)
 </head>
 <body>
     <div id="frm">
-    <div style='margin:15px'>
-        <img src="captcha.php">
-    </div>
         <form action= "process.php" method="POST">
             <p>
                 <label>Username:</label>
@@ -34,7 +31,9 @@ if (isset($_POST['input']) && sizeof($_POST['input']) > 0)
                 <label>Password:</label>
                 <Input type="password" id="pass" name="pass"  />
             </p>
-            " <?php echo $_SERVER['PHP_SELF']; ?>">
+            <div style='margin:15px'>
+                <img src="captcha.php">
+            </div>
             <input type="text" name="input"/>
             <input type="hidden" name="flag" value="1"/>
             <p>
