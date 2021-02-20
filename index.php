@@ -51,7 +51,7 @@ input:checked + .slider:before {
   display: none;
 }
 
-.on, .off
+.public, .private
 {
   color: white;
   position: absolute;
