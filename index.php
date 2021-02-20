@@ -11,7 +11,7 @@
     <p>upload photo</p>
     <form action="/action_page.php">
       <input type="file" id="myFile" name="filename">
-      <label><input type="checkbox" name="checkbox" value="value">Text</label>
+      <label><input type="checkbox" name="checkbox" value="value">public    </label>
       <input type="submit">
     </form>
 </body>
