@@ -10,6 +10,10 @@
     <p>upload photo</p>
     <form action="/action_page.php">
       <input type="file" id="myFile" name="filename">
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
       <input type="submit">
     </form>
 </body>
