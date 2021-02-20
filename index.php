@@ -54,7 +54,7 @@
     }
 
     /*------ ADDED CSS ---------*/
-    .on
+    .public
     {
       display: none;
     }
